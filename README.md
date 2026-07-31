@@ -13,30 +13,23 @@
 
 각 HTML 파일 상단에 `출시 전 법률 검토 필요` 주석이 있습니다. 실제 법률 자문 없이 그대로 게시하지 마세요.
 
-## GitHub Pages 설정 절차
+## GitHub Pages 설정 절차 (완료됨 — 참고용 기록)
 
-1. 이 저장소를 GitHub에 새로 만들고(예: `prayer-legal`), **Public**으로 설정한 뒤 이 폴더 내용을 push합니다.
-   ```
-   git remote add origin https://github.com/<계정>/prayer-legal.git
-   git branch -M main
-   git push -u origin main
-   ```
-2. GitHub 저장소 페이지에서 **Settings → Pages**로 이동합니다.
-3. **Build and deployment → Source**를 `Deploy from a branch`로 선택합니다.
-4. **Branch**를 `main`, 폴더를 `/docs`로 선택하고 **Save**합니다.
-5. 1~2분 후 상단에 발행된 URL이 표시됩니다. 형식: `https://<계정>.github.io/prayer-legal/`
+1. 저장소 생성: `gh repo create prayer-legal --public --source=. --remote=origin`
+2. Push: `git branch -M main && git push -u origin main`
+3. Pages 활성화: Settings → Pages → Source `Deploy from a branch` → Branch `main` / 폴더 `/docs` → Save
+   (또는 API: `gh api repos/socuri9595-debug/prayer-legal/pages -X POST -f "source[branch]=main" -f "source[path]=/docs"`)
+4. 빌드 상태 확인: `gh api repos/socuri9595-debug/prayer-legal/pages/builds/latest`
 
-## 최종 URL
+## 최종 URL (2026-07-31 실제 접속 확인, 전부 200 OK)
 
 | 문서 | URL |
 |---|---|
-| 문서 목록 | `https://<계정>.github.io/prayer-legal/` |
-| 이용약관 (ko) | `https://<계정>.github.io/prayer-legal/legal/terms.html` |
-| 개인정보처리방침 (ko) | `https://<계정>.github.io/prayer-legal/legal/privacy.html` |
-| Terms of Service (en) | `https://<계정>.github.io/prayer-legal/legal/terms.en.html` |
-| Privacy Policy (en) | `https://<계정>.github.io/prayer-legal/legal/privacy.en.html` |
-
-`<계정>`과 최종 URL은 저장소 생성 후 확정되는 대로 이 표를 갱신합니다.
+| 문서 목록 | https://socuri9595-debug.github.io/prayer-legal/ |
+| 이용약관 (ko) | https://socuri9595-debug.github.io/prayer-legal/legal/terms.html |
+| 개인정보처리방침 (ko) | https://socuri9595-debug.github.io/prayer-legal/legal/privacy.html |
+| Terms of Service (en) | https://socuri9595-debug.github.io/prayer-legal/legal/terms.en.html |
+| Privacy Policy (en) | https://socuri9595-debug.github.io/prayer-legal/legal/privacy.en.html |
 
 ## 내용 업데이트 시
 
