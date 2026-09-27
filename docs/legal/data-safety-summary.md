@@ -1,6 +1,9 @@
 <!-- 출시 전 법률/정책 검토 필요 — 이 문서는 Play Console "데이터 보안" 양식에 그대로 옮기기 위한 실무 초안이며 법률 자문이 아닙니다. -->
 
-# Google Play Console "데이터 보안" 양식 작성 요약
+# Google Play Console "데이터 보안" 양식 작성 요약 (안드로이드 전용)
+
+> iOS 앱은 구성이 다르다(RevenueCat 없음·SDK 0개). App Store Connect 용 답변은
+> [`app-privacy-ios.md`](app-privacy-ios.md) 에 따로 있다.
 
 작성 기준: 2026-07-31, 코드베이스 전수 확인 결과 (build.gradle.kts / libs.versions.toml / AndroidManifest.xml / merged manifest / 소스 grep) 기반.
 
